@@ -39,7 +39,7 @@ you will have to manually copy into the text of an email.
 
 ====================  C) RDSEED SETUP  ====================
 
-The next  thing to check is that you have rdseed downloaded and compiled
+The next thing to check is that you have rdseed downloaded and compiled
 on your machine. Go to a Terminal window and try
 
 $>  rdseed -h
