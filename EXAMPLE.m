@@ -8,7 +8,7 @@ nwks = 'IU';
 chans = 'BHZ';
 locs = '00';
 datatype = 'SEED';
-ofile = 'reqest_details';
+ofile = 'request_details';
 odir = '.';
 
 starttimes = {'11 Mar 2011 05:00:00'};

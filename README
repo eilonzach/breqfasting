@@ -30,11 +30,12 @@ Where you obviously replace 'email_address' with your actual address
 (as a string) and 'outgoing_smtp_server' with the smtp server, which is 
 'smtp.gmail.com' if you are using the @brown.edu mail. 
 
-N.B. at this point, you may get an email from google saying that an app is 
-trying to sign into your email, and you will have to give it permission. If
-you don't like the idea of that, then fair enough, you just won't be able
-to have MATLAB send the actual email - it will just prepare the request 
-file that you will have to manually copy into the text of an email. 
+N.B. at this point, you may get an error, followed by an email from google 
+saying that an app is trying to sign into your email, and you will have to
+give it permission and run the email_matlab_setup() again. If you don't 
+like the idea of that, then fair enough, you just won't be able to have 
+MATLAB send the actual email - it will just prepare the request file that 
+you will have to manually copy into the text of an email. 
 
 ====================  C) RDSEED SETUP  ====================
 
