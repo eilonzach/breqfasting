@@ -54,7 +54,7 @@ if isempty(label)
     label = [usr,'_request_',datestr(now,'yyyymmddHHMM')];
 end
 if isempty(locs)
-    locs = '00';
+    locs = '';
 end
 
 if nargin < 9 || isempty(datatype)
@@ -66,6 +66,8 @@ end
 if nargin < 10 || isempty(ofile)
     ofile=['~/Documents/MATLAB/',label,'_BREQFAST_REQUEST'];
 end
+
+addpath([fileparts(which('breq_fast_process')),'/matguts']);
 
 %% make sure in right formats
 if ischar(stas), stas = {stas}; end
@@ -80,11 +82,11 @@ endtimes = datenum(endtimes);
 
 %% request details
 usrname(isspace(usrname)) = '_';
-institution = 'Brown University';
-snail_mail  = '324 Brook Street, Providence, RI 02912';
+institution = 'UC Santa Barbara';
+snail_mail  = '2116 Webb Hall, UCSB, Santa Barbara, CA 93106';
 e_mail      = getpref('Internet','E_mail');
-workphone   = '(845) 365-8460';
-workfax     = '(845) 365-8101';
+workphone   = '(805) 893-4688';
+workfax     = '(805) 893-2314';
 
 %% XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 %% SHOULDN'T NEED TO CHANGE ANYTHING BELOW HERE

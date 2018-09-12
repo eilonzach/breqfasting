@@ -53,6 +53,7 @@ usrname(isspace(usrname)) = '_';
 fprintf('   connecting to server\n')
 ftpobj = ftp('ftp.iris.washington.edu','anonymous','eilon@geol.ucsb.edu');
 cd(ftpobj,['pub/userdata/',usrname]);
+sf=struct(ftpobj);  sf.jobject.enterLocalPassiveMode();
 % parse to find SEED file that matches "label" and is most recent
 aa = dir(ftpobj);
 t0 = 0;
@@ -66,7 +67,9 @@ end
 if ~exist('SEED_file_name','var')
     close(ftpobj)
     cd(wd);
-    error('SEED file not on server yet'); 
+    fprintf('SEED file not on server yet\n'); 
+    traces = [];
+    return
 end
 
 fprintf('   downloading %s\n',SEED_file_name)
@@ -171,9 +174,9 @@ if size(traces,1)~=Nreq
 end
 
 cd(wd);
+pause(0.1);
 if ifdelete
-rmdir('temp_dir','s');
-
+    rmdir('temp_dir','s');
 end
 
 end
